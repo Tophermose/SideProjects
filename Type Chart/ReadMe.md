@@ -1,0 +1,1 @@
+This type chart is for use with Windows computers. I can't verify if they work on Linux, but the program doesn't work with Macs. Basically I had created a Pokemon-based Rock, Paper, Scissors game for my office mate's child when he was bored and got the idea to do the type chart thing on a grand scale. This is the fruits of my knowledge of GUI in Java. 
