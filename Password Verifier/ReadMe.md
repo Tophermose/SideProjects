@@ -1,1 +1,1 @@
-This is my attempts at creating password verificiations via Ruby and Java. 
+This is my attempts at creating password verificiation programs via Ruby and Java. 
