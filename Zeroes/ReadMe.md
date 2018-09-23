@@ -1,0 +1,1 @@
+After going over finding the Zeroes of an equation in Precalculus, I wanted to see if I could create them via Java. After a classmate and my professor expressed interest in my programs, I created one in Ruby and JavaScript as well. 
