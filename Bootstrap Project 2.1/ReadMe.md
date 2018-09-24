@@ -1,0 +1,1 @@
+This is the culminaton of many different stages of website design I studied in the summer of 2017 to accomplish making my own website. Some changes have been made here and there since its "completion" that year, but it is mostly work from over a year ago.
