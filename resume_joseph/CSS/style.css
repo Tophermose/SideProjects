@@ -1,0 +1,55 @@
+/* 
+    Created on : Sep 10, 2018, 1:15:54 PM
+    Author     : matthewjoseph
+*/
+html {
+    background-image: url("../images/DSC09480.jpg");
+    background-size: cover;
+    background-color: transparent;
+}
+
+main {
+    margin: 1.25em;
+    line-height: 1.5;
+}
+
+header {
+    margin: 1em;
+    font-size: 1em;
+    color: whitesmoke;
+    align-content: center;
+}
+
+body {
+    font-size: 4em;
+    font-weight: 500;
+    text-align: center;
+}
+
+img {
+    align-content: center;
+    size: 2em;
+}
+
+ol {
+    list-style-type: none;
+    left: -20px;
+    position: relative;
+}
+
+ol li {
+    background: white;
+    border-radius: 0.2em;
+    border: 5px solid black;
+    background: white;
+    margin: 3px;
+    width: 4em;
+    padding: 0.4em;
+    font-size: 1em;
+    height: 1em;
+    text-align: center;
+    display: inline;
+}
+
+
+
