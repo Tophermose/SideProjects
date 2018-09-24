@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photography</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/blueimp-gallery.min.css">
+    <link rel="stylesheet" type="text/css" href="css/photosmainstyle.css">
+    <meta name-"viewport" content="width-device-width"/>
+  </head>
+  <body>
+  <main>
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev" alt="The previous button."><</a>
+      <a class="next" alt="The next button.">></a>
+      <a class="close" alt="The close button.">x</a>
+      <a class="play-pause" alt="The play and pause button."></a>
+      <ol class="indicator"></ol>
+    </div>
+    <div id="links">
+      <a href="images/IMG_3106.jpg"> <img src="images/thumbs/IMG_3106thumb.jpg" alt="Taken at the overlook along the Henry Hudson Parkway"/></a>
+      <a href="images/IMG_1590b.jpg"> <img src="images/thumbs/IMG_1590bthumb.jpg"  alt="A shot of a building reflecting the sunset from the High Line in New York City."/></a>
+      <a href="images/IMG_3093.jpg"> <img src="images/thumbs/IMG_3093thumb.jpg"  alt="A picure of the George Washington Bridge that connects New York City and New Jersey, from under the bridge on the New York City side."/></a>
+      <a href="images/IMG_3038.jpg"> <img src="images/thumbs/IMG_3038thumb.jpg" alt="A shot of an empty path in Inwood Hill Park in northern Manhattan."/></a>
+      <a href="images/IMG_1781.jpg"> <img src="images/thumbs/IMG_1781thumb.jpg" alt="A macro close up of purple hydrangeas taken at Caramoor in New York"/></a>
+      <a href="images/IMG_2036.JPG"> <img src="images/thumbs/IMG_2036thumb.jpg" alt="A shot of the Riverdale skyline from the tip of Manhattan."/></a>
+      <a href="images/IMG_1844b.jpg"> <img src="images/thumbs/IMG_1844bthumb.jpg" alt="A shot of a train bridge spanning the Hudson River in the evening."/></a>
+      <a href="images/IMG_1888b.jpg"> <img src="images/thumbs/IMG_1888bthumb.jpg" alt="A misty tree atop a steep hill in the mountains of California."/></a>
+      <a href="images/IMG_1897b.jpg"> <img src="images/thumbs/IMG_1897bthumb.jpg" alt="A picture of the rows of grape bushes used to make wine in the California wine country."/></a>
+      <a href="images/IMG_2078b.jpg"> <img src="images/thumbs/IMG_2078bthumb.jpg" alt="A picture of the Hudson River, looking north."/></a>
+    </div>
+    <script>
+document.getElementById("links").onclick = function (event) {
+event = event || window.event;
+var target = event.target || event.srcElement,
+  link = target.src ? target.parentNode : target,
+  options = {index: link, event: event, hidePageScrollbars: false},
+  links = this.getElementsByTagName('a');
+blueimp.Gallery(links, options, {hidePageScrollbars: false});
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.blueimp-gallery.min.js"></script>
+<script src="js/blueimp-gallery.min.js"></script>
+<script>
+blueimp.Gallery(
+  document.getElementById('links').getElementsByTagName('a').
+  {
+    container: '#blueimp-gallery-carousel',
+    carousel: true
+  }
+);
+</script>
+    </main>
+    <footer>Pictures and poetry &copy Matthew C. Joseph <br />
+        Watermark by <a href="https://www.patreon.com/cuttleskulls" alt="A Patreon link for the artist that deisgned the watermark.">Cuttleskulls</a>
+    </footer>
+    </body>
+</html>

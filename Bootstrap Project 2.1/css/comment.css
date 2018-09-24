@@ -1,0 +1,25 @@
+body {
+  line-height: 1.5;
+  background-color: whitesmoke;
+  margin: 1.25em;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 0em 2.0em;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: serif;
+  text-align: center;
+  font-weight: 500;
+}
+
+p {
+  font-size: 2rem;
+  font-family: serif;
+  text-align: center;
+  font-weight: 500;
+}

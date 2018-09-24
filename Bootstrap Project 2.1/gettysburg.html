@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gettysburg</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/blueimp-gallery.min.css">
+    <link rel="stylesheet" type="text/css" href="css/gettysburgstyle.css">
+    <meta name-"viewport" content="width-device-width"/>
+  </head>
+  <body>
+  <main>
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev" alt="The previous button."><</a>
+      <a class="next" alt="The next button.">></a>
+      <a class="close" alt="The close button.">x</a>
+      <a class="play-pause" alt="The play and pause button."></a>
+      <ol class="indicator"></ol>
+    </div>
+    <div id="links">
+      <a href="gettysburg images/IMG_9154mark.JPG"> <img src="gettysburg images/thumbs/IMG_9154thumb.JPG" alt="A winding path on a grassy field near a battlefield in Gettysburg."/></a>
+      <a href="gettysburg images/IMG_9163mark.JPG"> <img src="gettysburg images/thumbs/IMG_9163thumb.JPG" alt="A tree-lined path stretching out into the distance."/></a>
+      <a href="gettysburg images/IMG_9234mark.JPG"> <img src="gettysburg images/thumbs/IMG_9234thumb.JPG" alt="A view of the grassy knoll from Culp's hill at sunset."/></a>
+      <a href="gettysburg images/IMG_9247mark.JPG"> <img src="gettysburg images/thumbs/IMG_9247thumb.JPG" alt="A view of the grassy knoll from Culp's hill at sunset."/><//></a>
+      <a href="gettysburg images/IMG_9256mark.JPG"> <img src="gettysburg images/thumbs/IMG_9256thumb.JPG" alt="A view of the grassy knoll from Culp's hill at sunset."/><//></a>
+      <a href="gettysburg images/IMG_9278mark.JPG"> <img src="gettysburg images/thumbs/IMG_9278thumb.JPG" alt="A picture of the statue of Brigadier General George S. Greene at sunset."/></a>
+      <a href="gettysburg images/IMG_9280mark.JPG"> <img src="gettysburg images/thumbs/IMG_9280thumb.JPG" alt="A view of the grassy knoll from the top of the Pennsylvania monument in Gettysburg."/></a>
+      <a href="gettysburg images/IMG_9307mark.JPG"> <img src="gettysburg images/thumbs/IMG_9307thumb.JPG" alt="A view of the grassy knoll from the top of the Pennsylvania monument in Gettysburg."/></a>
+      <a href="gettysburg images/IMG_9348mark.JPG"> <img src="gettysburg images/thumbs/IMG_9348thumb.JPG" alt="A view of a statue of a man on a horse off in the distance atop a small hill."/></a>
+      <a href="gettysburg images/IMG_9359mark.JPG"> <img src="gettysburg images/thumbs/IMG_9359thumb.JPG" alt="A view of a row of houses near downtown Gettysburg."/></a>
+      <a href="gettysburg images/IMG_9366mark.JPG"> <img src="gettysburg images/thumbs/IMG_9366thumb.JPG" alt="A picture of the battlefield, taken from atop the observatory on Culp's Hill."/></a>
+      <a href="gettysburg images/IMG_9367mark.JPG"> <img src="gettysburg images/thumbs/IMG_9367thumb.JPG" alt="A picture of the battlefield, taken from atop the observatory on Culp's Hill."/></a>
+      <a href="gettysburg images/IMG_9375mark.JPG"> <img src="gettysburg images/thumbs/IMG_9375thumb.JPG" alt="A picture of the battlefield, taken from atop the observatory on Culp's Hill."/></a>
+      <a href="gettysburg images/IMG_9383mark.JPG"> <img src="gettysburg images/thumbs/IMG_9383thumb.JPG" alt="A distant picture of a memorial statue for the 28th Pennsylvania Infantry."/></a>
+      <a href="gettysburg images/IMG_9385mark.JPG"> <img src="gettysburg images/thumbs/IMG_9385thumb.JPG" alt="A picture of a winding road in the forests in the Gettysburg battlefield with memorial statues in the distance."/></a>
+      <a href="gettysburg images/IMG_9387mark.JPG"> <img src="gettysburg images/thumbs/IMG_9387thumb.JPG" alt="A close up picture of a memorial statue for the 28th Pennsylvania Infantry."/></a>
+      <a href="gettysburg images/IMG_9392mark.JPG"> <img src="gettysburg images/thumbs/IMG_9392thumb.JPG" alt="A picture of a plaque explaining the timeline for the Civil War battles for the 28th Pennsylvania Infantry"/></a>
+      <a href="gettysburg images/IMG_9399mark.JPG"> <img src="gettysburg images/thumbs/IMG_9399thumb.JPG" alt="A staue of a Union soldier holding a gun, pointing off into the distance."/></a>
+      <a href="gettysburg images/IMG_9408mark.JPG"> <img src="gettysburg images/thumbs/IMG_9408thumb.JPG" alt="A distant picture of a memorial statue for the 28th Pennsylvania Infantry."/></a>
+
+    </div>
+    <script>
+document.getElementById("links").onclick = function (event) {
+event = event || window.event;
+var target = event.target || event.srcElement,
+  link = target.src ? target.parentNode : target,
+  options = {index: link, event: event, hidePageScrollbars: false},
+  links = this.getElementsByTagName('a');
+blueimp.Gallery(links, options, {hidePageScrollbars: false});
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.blueimp-gallery.min.js"></script>
+<script src="js/blueimp-gallery.min.js"></script>
+<script>
+blueimp.Gallery(
+  document.getElementById('links').getElementsByTagName('a').
+  {
+    container: '#blueimp-gallery-carousel',
+    carousel: true
+  }
+);
+</script>
+    </main>
+    <footer>Pictures and poetry &copy Matthew C. Joseph <br />
+        Watermark by <a href="https://www.patreon.com/cuttleskulls" alt="A Patreon link for the artist that deisgned the watermark.">Cuttleskulls</a>
+    </footer>
+    </body>
+</html>
