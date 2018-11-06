@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 1, 2018, 3:22:21 PM
+    Author     : matthewjoseph
+*/
+
+html {
+    background-image: url("../images/ace_dragon.jpg");
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+    background-color: transparent;
+    color: #ffcc99;
+    text-shadow: 2px 2px black;
+}
+h1{
+    text-align: center;
+    font-size: 6em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4em;
+}
+
+p { 
+    font-size: 2em;
+    text-align: left;
+}
+
+ul {
+    font-size: 2em;
+}
