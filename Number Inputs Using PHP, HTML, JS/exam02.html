@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head><title>TEST TWO</title>
+<script  type="text/javascript">
+function ajax(problem, choice)
+{
+	var ajaxRequest; 
+	try{ajaxRequest = new XMLHttpRequest();}
+	catch (e)
+	{
+		try{ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");}
+		catch (e) 
+		{
+			try{ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");}
+			catch (e){alert("Your browser broke!");return false;}
+		}
+	}
+
+
+	ajaxRequest.onreadystatechange = function()
+	{
+		if(ajaxRequest.readyState === 4)//Process Server Response
+		{
+			if(problem=="1") {
+				var value=ajaxRequest.responseText;
+				var z = document.getElementById('ans1');
+				z.value=value;
+			} else if (problem=="2") {
+				var value=ajaxRequest.responseText;
+				var a = document.getElementById('ans2');
+				a.value=value;
+			} else if (problem=="3") {
+				var value=ajaxRequest.responseText;
+				var b = document.getElementById('ans3');
+				b.value=value;
+			} else if (problem=="4") {
+				var value=ajaxRequest.responseText;
+				var c = document.getElementById('ans4');
+				c.value=value;
+			}
+		}
+	};
+		if (problem=="1") {
+			var d = document.getElementById('num1');
+      		var url = "exam02.php?choice="+choice+"&problem="+problem+"&numC="+d.value;
+      		ajaxRequest.open("GET", url, true);
+      		ajaxRequest.send(null); 
+      	} else if (problem=="2") {
+      		var e = document.getElementById('num2');
+      		//parseFloat(e);
+      		var url = "exam02.php?choice="+choice+"&problem="+problem+"&numD="+e.value;
+      		ajaxRequest.open("GET", url, true);
+      		ajaxRequest.send(null); 
+		} else {
+			var f = document.getElementById('num3');
+      		var g = document.getElementById('num4');
+      		var url = "exam02.php?choice="+choice+"&problem="+problem+"&numA="+f.value+"&numB="+g.value;
+      		ajaxRequest.open("GET", url, true);
+      		ajaxRequest.send(null); 
+		}
+
+		if(problem=="1") {
+		var a = document.getElementById('num1').value;
+		if(isNaN(a)) {
+			alert("The number is invalid.");
+			document.getElementById('ans1').value="";
+			return false;
+		} else {
+			alert("The number is valid.");
+		}
+		} else if (problem=="2") {
+		var b;
+		//parseFloat(a);
+		b = document.getElementById('num2').value;
+		if(b%1==0){
+			alert("The number is invalid.");
+			document.getElementById('ans2').value="";
+			return false;
+		} else {
+			alert("The number is valid.")
+		}
+		//This one doesn't work. 
+		} else {
+		var c = document.getElementById('num3').value;
+		var d = document.getElementById('num4').value;
+		if(isNaN(c) || isNaN(d)) {
+			alert("The number is invalid.");
+			document.getElementById('ans3').value="";
+			document.getElementById('ans4').value="";
+			return false;
+		} else {
+			alert("The number is valid.");
+		}
+	}
+}
+
+		</script>
+	</head>
+<body>
+<table style="border:solid black 5px">
+	<tr>
+   <td colspan="2" style="border:solid black 5px;">
+   		<form>
+		Input Value: <input type='text' id='num1'><br>
+		Factiorial Value: <input type='text' id='ans1'><br>
+		<input type='button' value='ANSWER' onClick='ajax(1, 1)'>
+		<input type='reset' value='CLEAR'>
+		</form>
+   </td>
+</tr>
+<tr>
+      <td style="border:solid black 5px;">
+      	<form>
+		Side: <input type='text' id='num2'><br>
+		Answer: <input type='text' id='ans2'><br>
+		<input type='button' value='AREA' onClick='ajax(2, 2)'>
+		<input type='button' value='PERIMETER' onClick='ajax(2, 3)'>
+		<input type='reset' value='CLEAR'>
+		</form>
+		</td>
+	<td style="border:solid black 5px;"><form>
+		<form>
+		Midterm: <input type='text' id='num3'><br>
+		Final: <input type='text' id='num4'><br>
+		Average: <input type='text' id='ans3'><br>
+		Letter: <input type='text' id='ans4'><br>
+		<input type='button' value='AVERAGE' onClick='ajax(3, 5)'>
+		<input type='button' value='LETTER' onClick='ajax(4, 5)'>
+		<input type='reset' value='CLEAR'>
+</form>
+
+		
+	</td>
+   </tr>
+</table>
+</body>
+</html>
