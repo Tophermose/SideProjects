@@ -1,0 +1,101 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<title>Increment</title>
+	<script>
+		function createForm() {
+			
+			//var tble= document.createElement("table"); Not the way to go!
+			var div1 = document.createElement("div");
+			div1.style ="width:100%;font-size: x-large";
+			var div2 = document.createElement("div"); 
+			div2.style="width:500px;height:125px;margin:0px auto;background-color:green;color:black;border:solid black 5px"; //need to align to the left. 
+			var form = document.createElement("form");
+			//form.style="background-color:green";
+			//Not creating the elements I need
+			var input = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.id="numIn";
+			var output = document.createElement("input");
+			output.setAttribute("type", "text");
+			output.id="numOut";
+			var newline = document.createElement("br");
+			var newline2 = document.createElement("br");
+			var newline3 = document.createElement("br");
+			var enter = document.createElement("input"); //type = submit value = text2
+			enter.setAttribute("type", "button");
+			enter.setAttribute("value", "ENTER");
+			enter.setAttribute("onClick", "ajax()");
+			var clear = document.createElement("input"); //tyoe = reset Value = text3
+			clear.setAttribute("type", "reset");
+			clear.setAttribute("value", "CLEAR");
+			
+			var label1 = document.createElement("label");
+			var label2 = document.createElement("label");
+			var label3 = document.createElement("label");
+			var text1 = document.createTextNode("INC PROBLEM");
+			var text2 = document.createTextNode("Enter Value: ");
+			var text3 = document.createTextNode("Answer: ");
+
+			
+			label1.appendChild(text1);
+			label2.appendChild(text2);
+			label3.appendChild(text3);
+
+			div1.appendChild(form);
+			form.appendChild(div2);
+			div2.appendChild(label1);
+			div2.appendChild(newline);
+			div2.appendChild(input);
+			div2.insertBefore(label2,input);
+			div2.appendChild(newline2);
+			div2.appendChild(output);
+			div2.insertBefore(label3,output);
+			div2.appendChild(newline3);
+			div2.appendChild(enter);
+			div2.appendChild(clear);
+			
+			//form.appendChild(output); where it all goes wrong!
+			
+			
+			document.body.appendChild(div1);
+			//alert(document.body.innerHTML);
+		}
+
+		function ajax()
+		{
+			var ajaxRequest; 
+			try{ajaxRequest = new XMLHttpRequest();}
+			catch (e)
+			{
+				try{ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");}
+				catch (e) 
+			{
+				try{ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");}
+				catch (e){alert("Your browser broke!");return false;}
+			}
+		}
+
+
+		ajaxRequest.onreadystatechange = function()
+		{
+			if(ajaxRequest.readyState === 4)//Process Server Response
+			{
+					var value=ajaxRequest.responseText;
+					var numOut = document.getElementById("numOut");
+					numOut.value=value;
+
+			}
+		};
+
+
+			var numIn = document.getElementById("numIn");
+			var url = "incrementtestAjax.php?numIn="+numIn.value;
+      		ajaxRequest.open("GET", url, true);
+      		ajaxRequest.send(null); 
+	}
+	</script>
+</head>
+<body onload="createForm();">
+	</body>
+	</html>
